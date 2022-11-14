@@ -1,0 +1,23 @@
+{
+  "name": "interaxe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass css/main.scss css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romainmltr/Interaxe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romainmltr/Interaxe/issues"
+  },
+  "homepage": "https://github.com/romainmltr/Interaxe#readme",
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}
