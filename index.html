@@ -12,6 +12,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+        <link
+             rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <title>Landing Page</title>
 </head>
 
@@ -54,17 +62,80 @@
         </div>
         <div class="right">
             <h3>Qui sommes-nous ?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat purus id orci dictum, id scelerisque felis convallis. Morbi ut tortor eu ligula lobortis maximus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat purus id orci dictum, id
+                scelerisque felis convallis. Morbi ut tortor eu ligula lobortis maximus.</p>
 
         </div>
 
     </section>
+    <section class="avis">
+        <h2>Ils nous ont fait confiance</h2>
+        <div class="slider owl-carousel">
+            <div class="card">
+                <div class="img">
+                    <img src="img/test.PNG" alt="Photo de Joe">
+                </div>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Aenean consequat purus id orci
+                        dictum, id scelerisque felis convallis.<br>
+                        Morbi ut tortor eu ligula lobortis maximus.
+                    </p>
+                    <div class="title">
+                        John DOE</div>
+                    <div class="sub-title">
+                        <image src="/img/Étoiles.png">
+                    </div>
+                </div>
+            </div>
 
+            <div class="card">
+                <div class="img">
+                    <img src="img/test.PNG" alt="Photo de Joe">
+                </div>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Aenean consequat purus id orci
+                        dictum, id scelerisque felis convallis.<br>
+                        Morbi ut tortor eu ligula lobortis maximus.
+                    </p>
+                    <div class="title">
+                        John DOE</div>
+                    <div class="sub-title">
+                        <image src="/img/Étoiles.png">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="img/test.PNG" alt="Photo de Joe">
+                </div>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Aenean consequat purus id orci
+                        dictum, id scelerisque felis convallis.<br>
+                        Morbi ut tortor eu ligula lobortis maximus.
+                    </p>
+                    <div class="title">
+                        John DOE</div>
+                    <div class="sub-title">
+                        <image src="/img/Étoiles.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
     <footer></footer>
 
 
 
 
-
+    <script>
+        $(".slider").owlCarousel({
+            loop: true, autoplay: true, autoplayTimeout: 2000, //2000ms = 2s;
+            autoplayHoverPause: true
+        });
+    </script>
 </body>
