@@ -268,4 +268,35 @@ section.avis .slider p {
   text-align: center;
 }
 
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(250, 250, 250);
+}
+footer .footerPart {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .footerPart img.logo {
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+footer p {
+  margin-left: 50px;
+}
+footer .networkfooter {
+  max-width: 500px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+footer li {
+  margin-top: 20px;
+  list-style-type: none;
+}
+footer li img {
+  margin-right: 40px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -270,6 +270,40 @@ section.avis {
   }
 }
 
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(250, 250, 250, 1);
+  .footerPart {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img.logo {
+      max-width: 500px;
+      margin-bottom: 50px;
+    }
+  }
+  p {
+    margin-left: 50px;
+  }
+  .networkfooter {
+    max-width: 500px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  li {
+    margin-top: 20px;
+    list-style-type: none;
+
+    img {
+      margin-right: 40px;
+    }
+  }
+}
+
 // Mixins (responsive)
 @mixin for-phone-only {
   @media screen and (max-width: 599px) {
