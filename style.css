@@ -89,6 +89,10 @@ video {
   transition: color 70ms;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-size: 4rem;
   font-weight: 700;
@@ -123,15 +127,36 @@ header img {
 header ul {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: right;
   align-items: center;
 }
 header ul a {
-  margin-inline: 16px;
+  margin-inline: 20px;
   text-decoration: none;
   list-style: none;
   font-size: 16px;
   color: #000;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+header ul a:hover {
+  color: #000;
+}
+header ul a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+header ul a:hover::before {
+  transform: scaleX(1);
 }
 
 #accueil {
@@ -203,7 +228,7 @@ header ul a {
 }
 
 section.avis {
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
