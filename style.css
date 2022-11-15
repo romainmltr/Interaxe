@@ -169,4 +169,37 @@ header ul a {
   background-color: #1e6fa8;
 }
 
+#qui-sommes-nous {
+  display: flex;
+  padding: 6%;
+}
+#qui-sommes-nous .left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#qui-sommes-nous .left img {
+  width: 70%;
+  object-fit: cover;
+}
+#qui-sommes-nous .right {
+  width: 50%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#qui-sommes-nous .right h3 {
+  font-size: 1.6rem;
+}
+#qui-sommes-nous .right p {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 100;
+  font-style: italic;
+  width: 400px;
+}
+
 /*# sourceMappingURL=style.css.map */

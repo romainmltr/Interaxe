@@ -168,6 +168,41 @@ header {
   }
 }
 
+#qui-sommes-nous{
+  display: flex;
+  padding: 6%;
+  .left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 70%;
+      object-fit: cover;
+    }
+  }
+  .right{
+    width: 50%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3{
+      font-size: 1.6rem;
+    }
+    p{
+      font-size: 1.4rem;
+      text-align: center;
+      font-weight: 100;
+      font-style: italic;
+      width: 400px;
+    }
+    
+  }
+}
+
 // Mixins (responsive)
 @mixin for-phone-only {
   @media screen and (max-width: 599px) {
