@@ -85,6 +85,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  -webkit-transition: color 70ms;
   transition: color 70ms;
 }
 
@@ -118,21 +119,35 @@ h3 {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-inline: 5%;
   height: 5vw;
 }
+
 header img {
   width: 200px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
+
 header ul {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: right;
-  align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 header ul a {
   margin-inline: 20px;
   text-decoration: none;
@@ -143,9 +158,11 @@ header ul a {
   color: #000;
   text-decoration: none;
 }
+
 header ul a:hover {
   color: #000;
 }
+
 header ul a::before {
   content: "";
   position: absolute;
@@ -155,11 +172,17 @@ header ul a::before {
   bottom: -3px;
   left: 0;
   background-color: #000;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
+
 header ul a:hover::before {
-  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 #accueil {
@@ -169,59 +192,100 @@ header ul a:hover::before {
   background-position: center;
   padding-inline: 10%;
   margin-inline: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #accueil h1 {
-  color: rgb(243, 243, 243);
+  color: #f3f3f3;
 }
 
 #reserver {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: -40px;
 }
+
 #reserver .btn {
   background-color: #319edb;
-  color: rgb(243, 243, 243);
+  color: #f3f3f3;
   list-style: none;
   text-decoration: none;
   padding: 15px 70px;
   font-size: 1.4rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 #reserver .btn:hover {
   background-color: #1e6fa8;
 }
 
 #qui-sommes-nous {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 6%;
 }
+
 #qui-sommes-nous .left {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #qui-sommes-nous .left img {
   width: 70%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
 #qui-sommes-nous .right {
   width: 50%;
   padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 #qui-sommes-nous .right h3 {
   font-size: 1.6rem;
 }
+
 #qui-sommes-nous .right p {
   font-size: 1.4rem;
   text-align: center;
@@ -230,41 +294,150 @@ header ul a:hover::before {
   width: 400px;
 }
 
+section.newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(img/bgcNewsletter.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.newsletter h2 {
+  color: #fff;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.newsletter .form {
+  margin: 77px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.newsletter .form input {
+  width: 598px;
+  background-color: transparent;
+  border: none;
+}
+
+section.newsletter .form input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+section.newsletter .form input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+section.newsletter .form input::-ms-input-placeholder {
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+section.newsletter .form input::placeholder {
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+section.newsletter .form img {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+section.newsletter .form span {
+  background-color: #fff;
+}
+
 section.avis {
   margin-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 section.avis .slider {
   max-width: 1100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 section.avis .slider .card {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin: 0 10px;
   border-radius: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 section.avis .slider .img img {
   height: 250px;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
 }
+
 section.avis .slider .content {
   padding: 50px 40px;
   border-radius: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 section.avis .slider .title {
   font-size: 25px;
   font-weight: 600;
 }
+
 section.avis .slider p {
   padding: 10px;
   margin: 10px 0;
@@ -272,38 +445,53 @@ section.avis .slider p {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  background-color: rgb(250, 250, 250);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #fafafa;
 }
+
 footer .footerPart {
   margin: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 footer .footerPart img.logo {
   max-width: 500px;
   margin-bottom: 50px;
 }
+
 footer p {
   margin-left: 50px;
 }
+
 footer .networkfooter {
   max-width: 500px;
   margin-left: 50px;
   margin-top: 50px;
 }
+
 footer li {
   margin-top: 20px;
   list-style-type: none;
 }
+
 footer li img {
   margin-right: 40px;
 }
 
 #creepy * {
-  font-family: "Danger Night - Personal Use", sans-serif;
+  font-family: 'Danger Night - Personal Use', sans-serif;
 }
-
 /*# sourceMappingURL=style.css.map */

@@ -230,6 +230,49 @@ header {
     }
   }
 }
+
+
+section.newsletter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(img/bgcNewsletter.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  h2{
+    color: #fff;
+    text-align: center;
+    align-items: center;
+  }
+  .form{
+    margin:77px;  
+    border-radius:5px;
+    border: 2px solid #fff;
+    display: flex;
+
+    input{
+      width:598px;
+      background-color: transparent;
+      border:none;
+      &::placeholder{
+        color: #fff;
+        font-size: 1rem;
+        margin-left: 10px;
+      }
+    }
+    img{
+      padding: 10px;
+      margin-left: 10px;
+    }
+    span{ 
+      background-color: #fff;
+    }
+  }
+}
+
 section.avis {
   margin-top: 2%;
   display: flex;
