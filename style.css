@@ -92,7 +92,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body * {
   font-family: "Inter", sans-serif;
 }
 
@@ -162,8 +162,8 @@ header ul a:hover::before {
   transform: scaleX(1);
 }
 
-#accueil {
-  background-image: url(img/landing_accueil_moutains_black.jpeg);
+.accueil {
+  background-image: url(img/landing_accueil_moutains_black.jpg);
   height: calc(80vh - 5vw);
   background-size: cover;
   background-position: center;
@@ -174,7 +174,7 @@ header ul a:hover::before {
   justify-content: center;
   align-items: center;
 }
-#accueil h1 {
+.accueil h1 {
   color: rgb(243, 243, 243);
 }
 
@@ -302,8 +302,25 @@ footer li img {
   margin-right: 40px;
 }
 
+#creepy {
+  background: linear-gradient(180deg, #000000 19.92%, #1c0907 27.15%, #200a08 38.68%, #000000 50.49%, #000000 64.25%, #200a08 74.6%, #131313 86.57%);
+}
 #creepy * {
   font-family: "Danger Night - Personal Use", sans-serif;
+  color: #fff;
+}
+#creepy header * {
+  font-size: 1.5rem;
+}
+#creepy .accueil {
+  background-image: url(img/creepy/creepy_accueil.jpg);
+  height: 653px;
+}
+#creepy .btn {
+  background-color: rgb(48, 16, 16);
+}
+#creepy footer {
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

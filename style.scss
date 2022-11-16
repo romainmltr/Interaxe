@@ -91,9 +91,10 @@ video {
 html {
   scroll-behavior: smooth;
 }
-body{
-  font-family: "Inter", sans-serif;
-
+body {
+  * {
+    font-family: "Inter", sans-serif;
+  }
 }
 
 h1 {
@@ -162,8 +163,8 @@ header {
   }
 }
 
-#accueil {
-  background-image: url(img/landing_accueil_moutains_black.jpeg);
+.accueil {
+  background-image: url(img/landing_accueil_moutains_black.jpg);
   height: calc(80vh - 5vw);
   background-size: cover;
   background-position: center;
@@ -309,9 +310,40 @@ footer {
 
 // CREEPY
 
-#creepy{
-  *{
-    font-family: 'Danger Night - Personal Use', sans-serif;
+#creepy {
+  background: linear-gradient(
+    180deg,
+    #000000 19.92%,
+    #1c0907 27.15%,
+    #200a08 38.68%,
+    #000000 50.49%,
+    #000000 64.25%,
+    #200a08 74.6%,
+    #131313 86.57%
+  );
+  
+
+  * {
+    font-family: "Danger Night - Personal Use", sans-serif;
+    color: #fff;
+  }
+
+  header {
+    * {
+      font-size: 1.5rem;
+    }
+  }
+
+  .accueil {
+    background-image: url(img/creepy/creepy_accueil.jpg);
+    height: 653px;
+  }
+
+  .btn{
+    background-color: rgba(48, 16, 16, 1)
+  }
+  footer{
+    background-color: transparent;
   }
 }
 
