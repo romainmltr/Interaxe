@@ -85,12 +85,15 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: "Inter", sans-serif;
   transition: color 70ms;
 }
 
 html {
   scroll-behavior: smooth;
+}
+body{
+  font-family: "Inter", sans-serif;
+
 }
 
 h1 {
@@ -119,7 +122,7 @@ header {
   height: 5vw;
 
   img {
-    width: 150px;
+    width: 200px;
     object-fit: contain;
   }
   ul {
@@ -301,6 +304,14 @@ footer {
     img {
       margin-right: 40px;
     }
+  }
+}
+
+// CREEPY
+
+#creepy{
+  *{
+    font-family: 'Danger Night - Personal Use', sans-serif;
   }
 }
 
