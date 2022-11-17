@@ -87,26 +87,38 @@ video {
   vertical-align: baseline;
   transition: color 70ms;
 }
+@mixin xl {
+  @media screen and (max-width: 1000px) 
+  { @content; 
+  }
+}
 
 html {
   scroll-behavior: smooth;
 }
 body{
   font-family: "Inter", sans-serif;
-
 }
+
+
 
 h1 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+  @include xl{
+    font-size: 3rem;
+  }
 }
 h2 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+  @include xl{
+    font-size: 1,5rem;
+  }
 }
 h3 {
   font-size: 1.5rem;
@@ -120,12 +132,21 @@ header {
   align-items: center;
   margin-inline: 5%;
   height: 5vw;
+  @include xl{
+  flex-direction: column;
+  display: flex;
+  height: 15vh;
+  }
 
   img {
     width: 200px;
     object-fit: contain;
   }
   ul {
+    @include xl{
+      justify-content: space-around;
+      margin:10px;
+    }
     width: 100%;
     display: flex;
     justify-content: right;
@@ -200,6 +221,12 @@ header {
 #qui-sommes-nous {
   display: flex;
   padding: 6%;
+  @include xl{
+    flex-direction: column;
+    display: flex;
+    padding: 0;
+    align-items: center
+  }
   .left {
     width: 50%;
     display: flex;
@@ -225,6 +252,11 @@ header {
       font-size: 1.4rem;
       text-align: center;
       font-weight: 100;
+      @include xl{
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
+      }
       font-style: italic;
       width: 400px;
     }
@@ -252,9 +284,15 @@ section.newsletter{
     border-radius:5px;
     border: 2px solid #fff;
     display: flex;
+    @include xl{
+      width: 50%;
+    }
 
     input{
       width:598px;
+      @include xl{
+        width: 100%;
+      }
       background-color: transparent;
       border:none;
       &::placeholder{
@@ -295,6 +333,10 @@ section.avis {
       width: 100%;
       object-fit: cover;
       border-radius: 50%;
+      @include xl{
+        height: 100px;
+        width: 100%;
+      }
     }
     .content {
       padding: 50px 40px;
@@ -302,10 +344,19 @@ section.avis {
       display: flex;
       align-items: center;
       flex-direction: column;
+      @include xl{
+        padding: 0px 0px;
+      }
     }
     .title {
       font-size: 25px;
       font-weight: 600;
+    }
+    img{
+      @include xl{
+        height: 20px;
+        width: 100px;
+      }
     }
 
     p {
@@ -316,19 +367,41 @@ section.avis {
   }
 }
 
+section{
+  @include xl{
+    margin-top: 50px;
+  }
+
+}
+
 footer {
   display: flex;
   justify-content: space-around;
   background-color: rgba(250, 250, 250, 1);
+  @include xl{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap
+  }
   .footerPart {
     margin: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    @include xl{
+      margin: 0rem;
+      display: flex;
+      align-items: center
+    }
     img.logo {
       max-width: 500px;
       margin-bottom: 50px;
+      @include xl{
+        width: 200px;
+      }
     }
   }
   p {
@@ -338,6 +411,9 @@ footer {
     max-width: 500px;
     margin-left: 50px;
     margin-top: 50px;
+    @include xl{
+      width: 200px;
+    }
   }
 
   li {
@@ -358,24 +434,3 @@ footer {
   }
 }
 
-// Mixins (responsive)
-@mixin for-phone-only {
-  @media screen and (max-width: 599px) {
-    @content;
-  }
-}
-@mixin for-tablet-landscape-up {
-  @media screen and (max-width: 900px) {
-    @content;
-  }
-}
-@mixin for-desktop-up {
-  @media screen and (max-width: 1200px) {
-    @content;
-  }
-}
-@mixin for-big-desktop-up {
-  @media screen and (max-width: 1800px) {
-    @content;
-  }
-}

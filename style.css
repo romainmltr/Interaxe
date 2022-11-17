@@ -104,11 +104,23 @@ h1 {
   margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
 h2 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  h2 {
+    font-size: 1,5rem;
+  }
 }
 
 h3 {
@@ -129,6 +141,19 @@ header {
   height: 5vw;
 }
 
+@media screen and (max-width: 1000px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 15vh;
+  }
+}
+
 header img {
   width: 200px;
   -o-object-fit: contain;
@@ -146,6 +171,14 @@ header ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  header ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 10px;
+  }
 }
 
 header ul a {
@@ -245,6 +278,22 @@ header ul a:hover::before {
   padding: 6%;
 }
 
+@media screen and (max-width: 1000px) {
+  #qui-sommes-nous {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 #qui-sommes-nous .left {
   width: 50%;
   display: -webkit-box;
@@ -294,6 +343,14 @@ header ul a:hover::before {
   width: 400px;
 }
 
+@media screen and (max-width: 1000px) {
+  #qui-sommes-nous .right p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 section.newsletter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -332,10 +389,22 @@ section.newsletter .form {
   display: flex;
 }
 
+@media screen and (max-width: 1000px) {
+  section.newsletter .form {
+    width: 50%;
+  }
+}
+
 section.newsletter .form input {
   width: 598px;
   background-color: transparent;
   border: none;
+}
+
+@media screen and (max-width: 1000px) {
+  section.newsletter .form input {
+    width: 100%;
+  }
 }
 
 section.newsletter .form input::-webkit-input-placeholder {
@@ -418,6 +487,13 @@ section.avis .slider .img img {
   border-radius: 50%;
 }
 
+@media screen and (max-width: 1000px) {
+  section.avis .slider .img img {
+    height: 100px;
+    width: 100%;
+  }
+}
+
 section.avis .slider .content {
   padding: 50px 40px;
   border-radius: 1px;
@@ -433,15 +509,34 @@ section.avis .slider .content {
           flex-direction: column;
 }
 
+@media screen and (max-width: 1000px) {
+  section.avis .slider .content {
+    padding: 0px 0px;
+  }
+}
+
 section.avis .slider .title {
   font-size: 25px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+  section.avis .slider img {
+    height: 20px;
+    width: 100px;
+  }
 }
 
 section.avis .slider p {
   padding: 10px;
   margin: 10px 0;
   text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  section {
+    margin-top: 50px;
+  }
 }
 
 footer {
@@ -451,6 +546,25 @@ footer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #fafafa;
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 footer .footerPart {
@@ -467,9 +581,27 @@ footer .footerPart {
           justify-content: center;
 }
 
+@media screen and (max-width: 1000px) {
+  footer .footerPart {
+    margin: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 footer .footerPart img.logo {
   max-width: 500px;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  footer .footerPart img.logo {
+    width: 200px;
+  }
 }
 
 footer p {
@@ -480,6 +612,12 @@ footer .networkfooter {
   max-width: 500px;
   margin-left: 50px;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  footer .networkfooter {
+    width: 200px;
+  }
 }
 
 footer li {
